@@ -77,7 +77,7 @@ rand = { workspace = true, features = ["std"] }
 rstest.workspace = true
 
 [features]
-default = ["std", "c-kzg", "secp256k1", "portable", "blst"]
+default = ["std", "c-kzg", "secp256k1", "secp256r1", "portable", "blst"]
 std = [
 	"primitives/std",
 	"k256/std",
