@@ -77,7 +77,7 @@ rand = { workspace = true, features = ["std"] }
 rstest.workspace = true
 
 [features]
-default = ["std", "c-kzg", "secp256k1", "portable", "blst"]
+default = ["std", "c-kzg", "portable", "blst"]
 std = [
 	"primitives/std",
 	"k256/std",
@@ -85,8 +85,6 @@ std = [
 	"ripemd/std",
 	"sha2/std",
 	"c-kzg?/std",
-	"secp256k1?/std",
-	"libsecp256k1?/std",
 	"aurora-engine-modexp/std",
 	"p256?/std",
 	"ark-bn254/std",
