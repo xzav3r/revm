@@ -104,6 +104,14 @@ impl Precompiles {
                 println!("Feature `secp256r1` is NOT enabled!");
             }
 
+            if cfg!(feature = "secp256k1") {
+                println!("Feature `secp256k1` is enabled!");
+            } else {
+                println!("Feature `secp256k1` is NOT enabled!");
+            }
+
+
+
             Box::new(precompiles)
         })
     }
