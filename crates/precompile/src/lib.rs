@@ -98,8 +98,11 @@ impl Precompiles {
             #[cfg(feature = "secp256r1")]
             precompiles.extend([secp256r1::P256VERIFY]);
 
-            #[cfg(feature = "secp256r1")]
-            !unreachable!();
+            if cfg!(feature = "secp256r1") {
+                println!("Feature `secp256r1` is enabled!");
+            } else {
+                println!("Feature `secp256r1` is NOT enabled!");
+            }
 
             Box::new(precompiles)
         })
