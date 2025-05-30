@@ -94,9 +94,12 @@ impl Precompiles {
                 hash::RIPEMD160,
                 identity::FUN,
             ]);
-
+            
             #[cfg(feature = "secp256r1")]
             precompiles.extend([secp256r1::P256VERIFY]);
+
+            #[cfg(feature = "secp256r1")]
+            !unreachable!();
 
             Box::new(precompiles)
         })
